@@ -1,0 +1,45 @@
+#+TITLE: Currency Converter
+
+Small command line tool for calculating currency exchange rates.
+
+* Usage
+
+  #+BEGIN_EXAMPLE
+  $ ./currencyconv.py
+  file "rates.json" could not be found
+  Try re-running the program with the `u' or `update' option
+  #+END_EXAMPLE
+
+  Run ~./currencyconv.py u~ or ~./currencyconv.py update~ to download a list of exchange
+  rates from ~fixer.io~:
+
+  #+BEGIN_EXAMPLE
+  $ ./currencyconv.py u
+  $ ./currencyconv.py
+  Usage: ./currencyconv.py base target
+  Available rates:
+  AUD BGN BRL CAD CHF CNY CZK DKK GBP HKD
+  HRK HUF IDR ILS INR ISK JPY KRW MXN MYR
+  NOK NZD PHP PLN RON RUB SEK SGD THB TRY
+  USD ZAR EUR
+  #+END_EXAMPLE
+
+  Show rates for e.g., ~USD:CHF~:
+
+  #+BEGIN_EXAMPLE
+  $ ./currencyconv.py usd chf
+  Using rates from 2018-02-23
+  1.0000 USD is 0.9354 CHF
+  #+END_EXAMPLE
+
+  Also supports showing specific amounts:
+
+  #+BEGIN_EXAMPLE
+  $ ./currencyconv.py usd chf 1234
+  Using rates from 2018-02-23
+  1234.0000 USD is 1154.3353 CHF
+  #+END_EXAMPLE
+
+* License
+
+  Licensed under GPLv3. (See ~LICENSE~.)
