@@ -11,7 +11,7 @@ Small command line tool for calculating currency exchange rates.
   #+END_EXAMPLE
 
   Run ~./currencyconv.py u~ or ~./currencyconv.py update~ to download a list of exchange
-  rates from ~fixer.io~:
+  rates from ~fixer.io~ (this creates a file ~rates.json~):
 
   #+BEGIN_EXAMPLE
   $ ./currencyconv.py u
