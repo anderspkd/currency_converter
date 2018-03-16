@@ -69,6 +69,7 @@ base = sys.argv[1].upper()
 targ = sys.argv[2].upper()
 _base = RATES['base']  # the `standard' base used by fixer.io
 _rates = RATES['rates']
+_rates[_base] = 1.0  # add base to list of rates
 mult = 1.0 if len(sys.argv) == 3 else float(sys.argv[3])
 
 if (base not in _rates and base != _base):
