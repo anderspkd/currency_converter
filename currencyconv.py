@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Author: Anders Dalskov
 
@@ -20,7 +20,8 @@ import os
 import sys
 
 RATES = ''
-EXCH_FILE = 'rates.json'
+EXCH_FILE_BASE = 'rates.json'
+EXCH_FILE = os.path.join(os.environ['HOME'], '.config', EXCH_FILE_BASE)
 FIXER_IO = 'https://api.fixer.io/latest'
 
 # Run update.
